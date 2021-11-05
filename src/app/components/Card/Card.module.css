@@ -1,0 +1,9 @@
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 5px solid rgb(15, 136, 136);
+  box-shadow: 0 0.4rem 0 rgb(15, 136, 136);
+  background: rgb(87, 3, 139);
+  color: aliceblue;
+  padding: 10px;
+}
