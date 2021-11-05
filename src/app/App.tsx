@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import styles from './App.module.css';
 import Card from './components/Card/Card';
 import Title from './components/Title/Title';
+import Form from './components/Form/Form';
 
 function App(): JSX.Element {
-  const [cards] = useState([
+  const [cards, setCards] = useState([
     {
       title: 'Titanic',
       info: 'romance/drama',
@@ -16,6 +17,15 @@ function App(): JSX.Element {
       watched: true,
     },
   ]);
+  function handleSubmit(card: {
+    title: string;
+    info: string;
+    watched: boolean;
+  }) {
+    const newCards = [...cards];
+    newCards.push(card);
+    setCards(newCards);
+  }
 
   function renderCard(
     cards: {
@@ -39,7 +49,7 @@ function App(): JSX.Element {
   return (
     <div className={styles.appContainer}>
       <Title>Movies to watch</Title>
-      {/* <Form onSubmit={handleSubmit} /> */}
+      <Form onSubmit={handleSubmit} />
       {renderCard(cards)}
     </div>
   );
