@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './App.module.css';
 import Card from './components/Card/Card';
 import Title from './components/Title/Title';
-import Form from './components/Form/Form'
+import Form from './components/Form/Form';
 
 function App(): JSX.Element {
   const [cards, setCards] = useState([
