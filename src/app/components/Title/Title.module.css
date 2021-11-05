@@ -1,4 +1,8 @@
 .title {
+  text-align: center;
   color: whitesmoke;
   background-color: skyblue;
+  border: 5px solid rgb(42, 85, 85);
+  border-radius: 2rem;
+  box-shadow: 0 0.1rem 0 rgb(42, 85, 85);
 }
