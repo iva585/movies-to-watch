@@ -47,10 +47,12 @@ function App(): JSX.Element {
   }
 
   return (
-    <div className={styles.appContainer}>
+    <div className={styles.body}>
       <Title>Movies to watch</Title>
-      <Form onSubmit={handleSubmit} />
-      {renderCard(cards)}
+      <div className={styles.appContainer}>
+        <Form onSubmit={handleSubmit} />
+        {renderCard(cards)}
+      </div>
     </div>
   );
 }
