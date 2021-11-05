@@ -4,7 +4,7 @@ import Card from './components/Card/Card';
 import Title from './components/Title/Title';
 
 function App(): JSX.Element {
-  const [cards setCards] = useState([
+  const [cards] = useState([
     {
       title: 'Titanic',
       info: 'romance/drama',
@@ -38,7 +38,6 @@ function App(): JSX.Element {
   }
 
 
-  // <Card title={card.title} info={card.info} watched={cards.watched}/>
 
 
 
@@ -48,6 +47,7 @@ function App(): JSX.Element {
   return (
     <div className={styles.appContainer}>
       <Title>Movies to watch</Title>
+      {/* <Form onSubmit={handleSubmit} /> */}
       {renderCard(cards)}
       </div>    
   )}
