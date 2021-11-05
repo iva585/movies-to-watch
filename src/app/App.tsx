@@ -16,7 +16,7 @@ function App(): JSX.Element {
       watched: true,
     },
   ]);
-  
+
   function renderCard(
     cards: {
       title: string;
@@ -24,7 +24,6 @@ function App(): JSX.Element {
       watched: boolean;
     }[]
   ) {
-
     return cards.map((card) => {
       return (
         <Card
@@ -37,19 +36,13 @@ function App(): JSX.Element {
     });
   }
 
-
-
-
-
-
-
-
   return (
     <div className={styles.appContainer}>
       <Title>Movies to watch</Title>
       {/* <Form onSubmit={handleSubmit} /> */}
       {renderCard(cards)}
-      </div>    
-  )}
+    </div>
+  );
+}
 
 export default App;
