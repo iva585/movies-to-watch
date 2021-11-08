@@ -10,13 +10,13 @@ function App(): JSX.Element {
       title: 'Titanic',
       info: 'romance/drama',
       watched: false,
-      priority: "5",
+      priority: '5',
     },
     {
       title: 'Godfather',
       info: 'best movie of all times',
       watched: true,
-      priority: "4",
+      priority: '4',
     },
   ]);
   function handleSubmit(card: {
