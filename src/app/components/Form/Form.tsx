@@ -2,16 +2,25 @@ import React, { useState } from 'react';
 import styles from './Form.module.css';
 
 type FormProps = {
-  onSubmit: (card: { title: string; info: string; watched: boolean }) => void;
+  onSubmit: (card: {
+    title: string;
+    info: string;
+    watched: boolean;
+    priority: any;
+  }) => void;
 };
 
 function Form({ onSubmit }: FormProps): JSX.Element {
   const [title, setTitle] = useState('');
   const [info, setInfo] = useState('');
+  const [priority, setPriority] = useState('');
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    onSubmit({ title, info, watched: false });
+    onSubmit({ title, info, watched: false, priority });
+    setTitle('');
+    setInfo('');
+    setPriority('');
   }
 
   return (
@@ -30,6 +39,18 @@ function Form({ onSubmit }: FormProps): JSX.Element {
           value={info}
           onChange={(event) => setInfo(event.target.value)}
           type="text"
+        />
+      </label>
+      <label className={styles.label_priority}>
+        Movie Rating
+        <br />
+        <input
+          className={styles.number}
+          type="number"
+          defaultValue={1}
+          min={1}
+          max={5}
+          onChange={(event) => setPriority(event.target.value)}
         />
       </label>
       <input type="submit" value="submit" />
