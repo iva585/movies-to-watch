@@ -6,7 +6,7 @@ type FormProps = {
     title: string;
     info: string;
     watched: boolean;
-    priority: any;
+    priority: string;
   }) => void;
 };
 

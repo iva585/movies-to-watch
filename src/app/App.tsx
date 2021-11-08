@@ -10,20 +10,20 @@ function App(): JSX.Element {
       title: 'Titanic',
       info: 'romance/drama',
       watched: false,
-      priority: 5,
+      priority: "5",
     },
     {
       title: 'Godfather',
       info: 'best movie of all times',
       watched: true,
-      priority: 4,
+      priority: "4",
     },
   ]);
   function handleSubmit(card: {
     title: string;
     info: string;
     watched: boolean;
-    priority: number;
+    priority: string;
   }) {
     const newCards = [...cards];
     newCards.push(card);
@@ -35,7 +35,7 @@ function App(): JSX.Element {
       title: string;
       info: string;
       watched: boolean;
-      priority: number;
+      priority: string;
     }[]
   ) {
     return cards.map((card) => {

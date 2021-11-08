@@ -5,7 +5,7 @@ type CardProps = {
   watched: boolean;
   title: string;
   info?: string;
-  priority: number;
+  priority: string;
 };
 
 export default function Card({
@@ -32,7 +32,7 @@ export default function Card({
         value={prio}
         min={1}
         max={5}
-        onChange={(event) => setPrio(parseInt(event.target.value))}
+        onChange={(event) => setPrio(event.target.value)}
       />
     </section>
   );
